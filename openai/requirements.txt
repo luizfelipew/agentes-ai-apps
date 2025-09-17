@@ -8,3 +8,6 @@ numpy
 colorama
 streamlit
 Faker
+playsound==1.2.2
+PyAudio
+SpeechRecognition
