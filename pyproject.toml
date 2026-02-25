@@ -1,0 +1,43 @@
+[project]
+name = "agentes-ai-apps"
+version = "0.1.0"
+description = "Apps de agentes com LangChain e OpenAI"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "ipykernel",
+    # OpenAI
+    "openai>=1.55.3",
+    "python-dotenv",
+    "yfinance",
+    "pandas",
+    "matplotlib",
+    "numpy",
+    "colorama",
+    "streamlit",
+    "Faker",
+    "playsound==1.2.2",
+    "PyAudio",
+    "SpeechRecognition",
+    # LangChain
+    "langchain==0.1.16",
+    "langchain-community==0.0.33",
+    "langchain-openai==0.1.3",
+    "huggingface_hub==0.22.2",
+    "transformers==4.39.3",
+    "jinja2==3.1.3",
+    "tiktoken",
+    "pypdf==4.2.0",
+    "yt_dlp==2024.4.9",
+    "pydub==0.25.1",
+    "beautifulsoup4==4.12.3",
+    "sentence-transformers==2.7.0",
+    "langchain-chroma",
+    "faiss-cpu",
+    "lark",
+]
+
+# ffmpeg e ffprobe são binários de sistema; instale com: apt install ffmpeg / brew install ffmpeg
+
+[tool.uv]
+dev-dependencies = []
