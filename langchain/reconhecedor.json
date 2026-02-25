@@ -1,0 +1,141 @@
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "e1f1a1b1-manual-trigger",
+      "name": "Ao Clicar",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [-220, 0]
+    },
+    {
+      "parameters": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Einstein_tongue.jpg",
+        "responseFormat": "file",
+        "options": {
+          "responsePropertyName": "reference_image"
+        }
+      },
+      "id": "e1f1a1b1-http-ref",
+      "name": "Baixar Foto Referencia",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "operation": "list",
+        "useQuery": true,
+        "query": "mimeType contains 'image/' and trashed = false",
+        "limit": 10,
+        "options": {
+          "fields": ["id", "name"]
+        }
+      },
+      "id": "e1f1a1b1-drive-list",
+      "name": "Listar Fotos Drive",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [0, 220]
+    },
+    {
+      "parameters": {
+        "mode": "crossJoin"
+      },
+      "id": "e1f1a1b1-merge",
+      "name": "Unir Referencia e Lista",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [260, 100]
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": "={{ $json.id }}",
+        "options": {
+          "binaryPropertyName": "candidate_image"
+        }
+      },
+      "id": "e1f1a1b1-drive-download",
+      "name": "Baixar Candidata",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [480, 100]
+    },
+    {
+      "parameters": {
+        "modelId": "gemini-1.5-flash",
+        "prompt": "Analise se a pessoa da imagem 'reference_image' está presente na imagem 'candidate_image'. Responda APENAS um JSON: { \"found\": true/false, \"desc\": \"...\" }",
+        "binaryDataInput": "define",
+        "binaryPropertyNames": "reference_image,candidate_image"
+      },
+      "id": "e1f1a1b1-gemini",
+      "name": "Gemini Vision",
+      "type": "n8n-nodes-base.googleGeminiChat",
+      "typeVersion": 1,
+      "position": [700, 100]
+    }
+  ],
+  "connections": {
+    "Ao Clicar": {
+      "main": [
+        [
+          {
+            "node": "Baixar Foto Referencia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baixar Foto Referencia": {
+      "main": [
+        [
+          {
+            "node": "Listar Fotos Drive",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Unir Referencia e Lista",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Fotos Drive": {
+      "main": [
+        [
+          {
+            "node": "Unir Referencia e Lista",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Unir Referencia e Lista": {
+      "main": [
+        [
+          {
+            "node": "Baixar Candidata",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baixar Candidata": {
+      "main": [
+        [
+          {
+            "node": "Gemini Vision",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
