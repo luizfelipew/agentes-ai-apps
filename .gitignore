@@ -26,3 +26,4 @@ TestResults.xml
 
 # virtual machine 
 /openai-venv
+*.m4a
