@@ -36,6 +36,8 @@ dependencies = [
     "langchain-chroma",
     "faiss-cpu",
     "lark",
+    "agentops>=0.4.21",
+    "setuptools>=82.0.1",
 ]
 
 # ffmpeg e ffprobe são binários de sistema; instale com: apt install ffmpeg / brew install ffmpeg
