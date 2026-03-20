@@ -1,0 +1,34 @@
+definir_objetivo_e_escopo:
+  description: >
+    Analisar o problema e definir o propósito e as funcionalidades do sistema multiagente.
+  expected_output: >
+    Documento descrevendo o objetivo do sistema e os tipos de agentes necessários.
+  agent: arquiteto_de_solucoes
+
+projetar_agentes:
+  description: >
+    Criar descrições detalhadas dos agentes, incluindo suas funções, metas e contextos, e estruturá-los no arquivo agents.yaml.
+  expected_output: >
+    Arquivo agents.yaml contendo todos os agentes com campos role, goal e backstory.
+  agent: designer_de_agentes
+
+planejar_tarefas:
+  description: >
+    Elaborar a lista de tarefas que compõem o sistema, com descrições, resultados esperados e responsáveis, e estruturar no arquivo tasks.yaml.
+  expected_output: >
+    Arquivo tasks.yaml com todas as tarefas detalhadas e vinculadas aos agentes.
+  agent: analista_de_tarefas
+
+criar_script_orquestracao:
+  description: >
+    Desenvolver o arquivo crew.py que carrega os agentes e tarefas, instanciando e coordenando a execução do sistema.
+  expected_output: >
+    Script crew.py funcional que executa o sistema com base nos arquivos agents.yaml e tasks.yaml.
+  agent: engenheiro_de_integracao
+
+testar_ajustar_sistema:
+  description: >
+    Executar testes no sistema para validar a atuação dos agentes e a realização correta das tarefas. Ajustar configurações conforme necessário.
+  expected_output: >
+    Relatório de testes e versão final ajustada dos arquivos do sistema.
+  agent: qa_de_agentes
