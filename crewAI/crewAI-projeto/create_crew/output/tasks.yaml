@@ -1,0 +1,40 @@
+tasks:
+  - name: pesquisa_tendencias_ai
+    description: >
+      Realiza uma pesquisa aprofundada sobre as tendências atuais em Inteligência Artificial Generativa, coletando artigos, estudos, vídeos e outros materiais pertinentes.
+    expected_output: >
+      Um resumo das descobertas e tendências em Inteligência Artificial Generativa, incluindo uma lista de materiais relevantes.
+    agent: >
+      Agente de Pesquisa
+
+  - name: organizacao_topicos_curso
+    description: >
+      Reúne e organiza os tópicos importantes identificados pelo agente de pesquisa em uma estrutura lógica e sequencial para o curso.
+    expected_output: >
+      Um esboço do curso com tópicos classificados por complexidade e relevância, incluindo objetivos de aprendizagem para cada módulo.
+    agent: >
+      Agente de Organização de Conteúdo
+
+  - name: criacao_material_didatico
+    description: >
+      Elabora o material didático com base no escopo do curso definido pelo agente de organização, incluindo apostilas, slides e quizzes.
+    expected_output: >
+      Um conjunto completo de material didático adaptado para diferentes estilos de aprendizado, incluindo exemplos práticos e exercícios interativos.
+    agent: >
+      Agente de Criação de Material Didático
+
+  - name: revisao_e_qualidade
+    description: >
+      Garante que o conteúdo criado esteja em conformidade com padrões de qualidade, clareza e adequação pedagógica, realizando revisões gramaticais e técnicas.
+    expected_output: >
+      Um relatório de revisão com cópias do material corrigido e sugestões de melhorias com base nas melhores práticas.
+    agent: >
+      Agente de Revisão e Qualidade
+
+  - name: coleta_feedback_alunos
+    description: >
+      Coleta e analisa o feedback dos alunos após a entrega do curso para identificar áreas de melhoria e sucesso.
+    expected_output: >
+      Uma análise detalhada do feedback dos alunos, incluindo propostas de melhorias e dados sobre a eficácia do material didático.
+    agent: >
+      Agente de Feedback

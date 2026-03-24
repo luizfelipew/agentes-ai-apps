@@ -1,0 +1,50 @@
+```yaml
+tasks:
+  - name: pesquisa_conteudo_relevante
+    description: >
+      Coletar e analisar materiais acadêmicos, artigos, livros e fontes online confiáveis sobre Inteligência Artificial Generativa.
+    expected_output: >
+      Lista de fontes confiáveis e resumos dos principais tópicos investigados.
+    agent: >
+      Agente de Pesquisa
+
+  - name: organizacao_topicos
+    description: >
+      Categorizar e hierarquizar os tópicos identificados, criando uma matriz de conteúdo que servirá como esqueleto do curso.
+    expected_output: >
+      Matriz de tópicos organizada por complexidade e relevância.
+    agent: >
+      Agente de Organização
+
+  - name: definicao_escopo_curso
+    description: >
+      Definir o escopo do curso, estabelecendo objetivos de aprendizagem, pré-requisitos e um cronograma pedagógico.
+    expected_output: >
+      Documento com o escopo do curso detalhado, incluindo objetivos e cronograma.
+    agent: >
+      Agente de Definição de Escopo
+
+  - name: criacao_apostilas_materiais_didaticos
+    description: >
+      Elaborar apostilas e materiais didáticos, traduzindo a pesquisa e a organização dos tópicos em textos acessíveis e exercícios.
+    expected_output: >
+      Apostilas e materiais didáticos prontos e revisados para uso por instrutores.
+    agent: >
+      Agente de Criação de Conteúdo
+
+  - name: avaliacao_qualidade_material
+    description: >
+      Revisar e avaliar a qualidade e relevância do conteúdo criado, assegurando que esteja atualizado e pedagogicamente eficaz.
+    expected_output: >
+      Relatório de avaliação com feedback e sugestões de melhorias para o material produzido.
+    agent: >
+      Agente de Avaliação
+
+  - name: atualizacoes_continuas
+    description: >
+      Monitorar novas publicações e avanços na área de Inteligência Artificial Generativa, integrando novas informações ao conteúdo.
+    expected_output: >
+      Sistema de atualização contínua com novas referências e conteúdos adicionados.
+    agent: >
+      Agente de Atualização
+```

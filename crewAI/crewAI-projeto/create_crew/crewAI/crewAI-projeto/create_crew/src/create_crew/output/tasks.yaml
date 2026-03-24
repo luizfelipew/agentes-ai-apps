@@ -1,0 +1,50 @@
+```yaml
+tasks:
+  - name: realizar_pesquisa
+    description: >
+      Efetuar uma coleta abrangente de informações sobre Inteligência Artificial Generativa, incluindo artigos acadêmicos, blogs, tutoriais e vídeos. O agente usará técnicas de web scraping e APIs para reunir dados relevantes e atualizados.
+    expected_output: >
+      Coletar uma lista de pelo menos 50 fontes confiáveis e recentes que abordem temas relevantes de Inteligência Artificial Generativa.
+    agent: >
+      Agente de Pesquisa
+
+  - name: organizar_conteudo
+    description: >
+      Analisar as informações coletadas pelo Agente de Pesquisa e agrupar os tópicos em categorias lógicas. Este agente será responsável por estruturar a informação, definindo quais tópicos são primários e quais são secundários, criando um esboço inicial para o curso.
+    expected_output: >
+      Um esboço estruturado dos tópicos a serem abordados no curso, organizados em categorias lógicas e prioridades definidas.
+    agent: >
+      Agente de Organização de Conteúdo
+
+  - name: definir_escopo
+    description: >
+      Delimitar o escopo do curso, considerando as necessidades e objetivos do público-alvo. Este agente fará sugestões sobre a carga horária, profundidade de cada tópico e tipo de avaliação a ser utilizada.
+    expected_output: >
+      Documento que define o escopo do curso, com carga horária, profundidade dos tópicos e métodos de avaliação propostos.
+    agent: >
+      Agente de Definição de Escopo
+
+  - name: produzir_conteudo
+    description: >
+      Criar a apostila didática com base no esboço elaborado pelo Agente de Organização de Conteúdo e no escopo definido pelo Agente de Definição de Escopo. Este agente será responsável pela redação, criação de imagens e design de layouts.
+    expected_output: >
+      Apostila didática completa, contendo textos, imagens e um layout organizado e atraente para os estudantes.
+    agent: >
+      Agente de Produção de Conteúdo
+
+  - name: verificar_qualidade
+    description: >
+      Realizar uma revisão do material produzido, checando a qualidade, relevância e precisão das informações. Este agente poderá incluir feedback de especialistas na área e realizar testes com usuários para garantir a eficácia do conteúdo.
+    expected_output: >
+      Relatório de revisão com notas sobre a qualidade do material e sugestões de melhorias, além de feedback objetivo de especialistas e testes de usuários.
+    agent: >
+      Agente de Qualidade
+
+  - name: coletar_feedback_Iteracao
+    description: >
+      Após a implementação inicial do curso e da apostila, coletar feedback dos alunos e professores, avaliando a eficácia do material didático. Este agente utilizará o feedback para iterar e aprimorar tanto o conteúdo quanto a estrutura do curso.
+    expected_output: >
+      Documento de feedback que inclui análises dos alunos e professores, com sugestões e pontos de melhoria para as iterações do curso.
+    agent: >
+      Agente de Feedback e Iteração
+```
