@@ -27,3 +27,4 @@ TestResults.xml
 # virtual machine 
 /openai-venv
 *.m4a
+langchain/files/chroma_vector_store
