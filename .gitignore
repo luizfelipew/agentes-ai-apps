@@ -28,3 +28,4 @@ TestResults.xml
 /openai-venv
 *.m4a
 langchain/files/chroma_vector_store
+langchain/files/chroma_retrieval_db
