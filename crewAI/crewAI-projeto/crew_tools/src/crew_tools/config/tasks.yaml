@@ -1,0 +1,55 @@
+pesquisa_conteudo:
+  description: >
+    O pesquisador de conteúdo utiliza a ferramenta SerperDevTool para buscar
+    informações relevantes sobre o tópico {topico}. Ele deve identificar
+    tendências educacionais, estudos acadêmicos, boas práticas e referências que
+    apoiarão o desenvolvimento do curso. Lembrando que estamos no ano de 2025.
+  expected_output: >
+    Um relatório de pesquisa que contenha um resumo das informações coletadas,
+    incluindo links para fontes relevantes, conceitos-chave e dados importantes
+    que servirão como base para a estruturação do curso.
+  agent: pesquisador_de_conteudo
+
+planejamento_conteudo:
+  description: >
+    O planejador de conteúdo organiza as informações do relatório do pesquisador
+    e utiliza a ferramenta ScrapeWebsiteTool para fazer scraping de sites
+    relevantes, criando um plano pedagógico detalhado com módulos, objetivos de
+    aprendizagem e estrutura do curso para o tema: {topico}.
+  expected_output: >
+    Um plano instrucional completo que delineia claramente os módulos do curso,
+    os conteúdos de cada um, os objetivos educacionais e as fontes que serão
+    utilizadas na elaboração das aulas.
+  agent: planejador_de_conteudo
+
+escrita_blog_post:
+  description: >
+    O criador de aulas utiliza o planejamento pedagógico desenvolvido pelo
+    planejador para criar os conteúdos de cada módulo sobre o tema {topico},
+    incluindo textos de apoio, roteiros de vídeo, exercícios e sugestões de
+    leitura.
+  expected_output: >
+    Um conjunto de conteúdos instrucionais bem estruturados, que podem ser
+    utilizados em uma plataforma de ensino online, cobrindo todos os tópicos e
+    objetivos definidos no planejamento.
+  agent: escritor_do_blog
+
+revisao_conteudo:
+  description: >
+    O revisor pedagógico revisa os conteúdos das aulas para assegurar clareza,
+    correção linguística, alinhamento com os objetivos pedagógicos e
+    consistência didática. Também pode adicionar sugestões ou informações que
+    complementem a aprendizagem.
+  expected_output: >
+    Conteúdo revisado, pedagógica e linguisticamente adequado, pronto para ser
+    utilizado em um curso online e enviado para formatação e publicação.
+  agent: revisor_do_conteudo
+
+salva_conteudo:
+  description: >
+    Salva os materiais instrucionais desenvolvidos utilizando a tool
+    FileWriterTool, nomeando os arquivos de maneira coerente com os módulos e o
+    tema do curso.
+  expected_output: >
+    Arquivo salvo.
+  agent: revisor_do_conteudo
