@@ -1,0 +1,14 @@
+responder_pergunta_lgpd:
+  description: >
+    Responda perguntas relacionadas à conformidade com a LGPD com base no
+    conteúdo do documento LGPD.pdf. Forneça a seção mais relevante da legislação
+    e resuma-a de forma clara e objetiva.
+
+    **Pergunta:** {pergunta}
+
+  expected_output: >
+    Uma resposta precisa e bem estruturada com base na LGPD. Sempre que
+    possível, cite o artigo ou capítulo correspondente da lei contido no arquivo
+    LGPD.pdf.
+
+  agent: lgpd_compliance_expert
